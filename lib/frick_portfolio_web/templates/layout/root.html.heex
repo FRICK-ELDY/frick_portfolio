@@ -15,7 +15,21 @@
     <div class="flex flex-col h-screen">
       <!-- hedder -->
       <div class="bg-blue-500 sticky top-0">
-        <p class="text-center text-5xl text-white"><%= gettext "Welcome to %{name}!", name: "FRICK-PortfolioSite" %></p>
+        <div class="flex flex-row-reverse">
+          <!-- Link -->
+          <div class="m-3"><a href="https://github.com/FRICK-ELDY" target="_blank"> 
+            <img src={Routes.static_path(@conn,"/images/GitHub-Mark-64px.png")} alt="GitHub" width="50" height="50" >
+          </a></div>
+          <div class="m-3"><a href="https://twitter.com/TewiEwi_no96" target="_blank">
+            <img src={Routes.static_path(@conn,"/images/Twitter social icons - circle - blue.svg")} alt="Twitter" width="50" height="50" >
+          </a></div>
+          <div class="m-3"><a href="http://www.youtube.com/channel/UChC5tn7HyeWI_Re-sBjqIfQ?sub_confirmation=1" target="_blank"> 
+            <img src={Routes.static_path(@conn,"/images/YouTube_social_white_circle_(2017).svg")} alt="YouTube" width="50" height="50" >
+          </a></div>
+          <div class="m-3"><a href="https://www.twitch.tv/frick_eldy" target="_blank"> 
+            <img src={Routes.static_path(@conn,"/images/8010448_twitch_social media_communication_chat_talk_icon.png")} alt="Twitch" width="50" height="50" >
+          </a></div>
+        </div>
       </div>
       <!-- content -->
       <div class="bg-white-500 flex-grow">
