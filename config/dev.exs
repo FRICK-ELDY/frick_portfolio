@@ -16,7 +16,15 @@ config :frick_portfolio, FrickPortfolioWeb.Endpoint,
   secret_key_base: "p0XbPcx8CgYthd/n+gITlqtGQOUO8E1pxE/+JrzuTbAB5viPOtrSyMrQAIQTFd0a",
   watchers: [
     # Start the esbuild watcher by calling Esbuild.install_and_run(:default, args)
-    esbuild: {Esbuild, :install_and_run, [:default, ~w(--sourcemap=inline --watch)]}
+    esbuild: {Esbuild, :install_and_run, [:default, ~w(--sourcemap=inline --watch)]},
+    npx: [
+      "tailwindcss",
+      "--input=css/app.css",
+      "--output=../priv/static/assets/app.css",
+      "--watch",
+      cd: Path.expand("../assets", __DIR__)
+    ]
+
   ]
 
 # ## SSL Support
