@@ -13,31 +13,52 @@
   </head>
   <body class="bg-white-500">
     <div class="flex flex-col h-screen">
-      <!-- hedder -->
-      <div class="bg-blue-500 sticky top-0">
-        <div class="flex flex-row-reverse">
-          <!-- Link -->
-          <div class="m-3"><a href="https://github.com/FRICK-ELDY" target="_blank"> 
-            <img src={Routes.static_path(@conn,"/images/GitHub-Mark-64px.png")} alt="GitHub" width="50" height="50" >
-          </a></div>
-          <div class="m-3"><a href="https://twitter.com/TewiEwi_no96" target="_blank">
-            <img src={Routes.static_path(@conn,"/images/Twitter social icons - circle - blue.svg")} alt="Twitter" width="50" height="50" >
-          </a></div>
-          <div class="m-3"><a href="http://www.youtube.com/channel/UChC5tn7HyeWI_Re-sBjqIfQ?sub_confirmation=1" target="_blank"> 
-            <img src={Routes.static_path(@conn,"/images/YouTube_social_white_circle_(2017).svg")} alt="YouTube" width="50" height="50" >
-          </a></div>
-          <div class="m-3"><a href="https://www.twitch.tv/frick_eldy" target="_blank"> 
-            <img src={Routes.static_path(@conn,"/images/8010448_twitch_social media_communication_chat_talk_icon.png")} alt="Twitch" width="50" height="50" >
-          </a></div>
+      <!-- hedder -->      
+      <section class="text-gray-700 bg-blue-500 body-font sticky top-0">
+        <div class=" container flex flex-col items-center px-8 py-8 mx-auto max-w-7xl sm:flex-row">
+          <!-- FRICK-Portfolio -->
+          <a href="https://twitter.com/TewiEwi_no96" class="text-xl font-black leading-none text-white-900 select-none logo">
+            <font style="vertical-align: inherit;">
+              <font style="vertical-align: inherit;">FRICK-Portfolio
+              </font>
+            </font>
+          </a>
+          <!-- ©2021 -->
+          <p class="mt-4 text-sm text-white-500 sm:ml-4 sm:pl-4 sm:border-l sm:border-gray-200 sm:mt-0"> 
+            <font style="vertical-align: inherit;">
+              <font style="vertical-align: inherit;"> ©2021 
+              </font>
+            </font>
+          </p>
+          
+          <span class="inline-flex justify-center mt-4 space-x-5 sm:ml-auto sm:mt-0 sm:justify-start">
+            <!-- youtube -->
+            <a href="http://www.youtube.com/channel/UChC5tn7HyeWI_Re-sBjqIfQ?sub_confirmation=1" >
+                <span class="sr-only"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">youtube</font></font></span>
+                <img src={Routes.static_path(@conn,"/images/YouTube_social_white_circle_(2017).svg")} alt="YouTube" width="32" height="32" >
+            </a>
+            <!-- github -->
+            <a href="https://github.com/FRICK-ELDY" >
+                <span class="sr-only"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">github</font></font></span>
+                <img src={Routes.static_path(@conn,"/images/GitHub-Mark-64px.png")} alt="GitHub" width="32" height="32" >
+            </a>
+            <!-- twitter -->
+            <a href="https://twitter.com/TewiEwi_no96" >
+                <span class="sr-only"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Twitter</font></font></span>
+                <img src={Routes.static_path(@conn,"/images/Twitter social icons - circle - blue.svg")} alt="Twitter" width="32" height="32" >
+            </a>
+          </span>
+
         </div>
-      </div>
-      <!-- content -->
-      <div class="bg-white-500 flex-grow">
+      </section>
+      <div class="bg-white-500 flex justify-center">
           <%= @inner_content %>
       </div>
       <!-- footer -->
       <div class="bg-blue-500 sticky bottom-0">
-        <p class="text-center">footer</p>
+        <div class="flex flex-row-reverse">
+          <!--  -->
+        </div>
       </div>
     </div>
   </body>
