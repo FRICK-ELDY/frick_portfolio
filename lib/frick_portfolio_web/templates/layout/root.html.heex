@@ -13,8 +13,13 @@
   </head>
   <body class="bg-white-500">
     <div class="flex flex-col h-screen">
-      <!-- hedder -->      
-      <section class="text-gray-700 bg-blue-500 body-font sticky top-0">
+      <!-- hedder -->   
+      <!-- content -->
+      <div class="bg-white-500 flex justify-center ">
+          <%= @inner_content %>
+      </div>
+      <!-- footer -->   
+      <section class="text-gray-700 bg-blue-500 body-font sticky bottom-0">
         <div class=" container flex flex-col items-center px-8 py-8 mx-auto max-w-7xl sm:flex-row">
           <!-- FRICK-Portfolio -->
           <a href="https://twitter.com/TewiEwi_no96" class="text-xl font-black leading-none text-white-900 select-none logo">
@@ -48,18 +53,8 @@
                 <img src={Routes.static_path(@conn,"/images/Twitter social icons - circle - blue.svg")} alt="Twitter" width="32" height="32" >
             </a>
           </span>
-
         </div>
       </section>
-      <div class="bg-white-500 flex justify-center">
-          <%= @inner_content %>
-      </div>
-      <!-- footer -->
-      <div class="bg-blue-500 sticky bottom-0">
-        <div class="flex flex-row-reverse">
-          <!--  -->
-        </div>
-      </div>
     </div>
   </body>
 </html>
